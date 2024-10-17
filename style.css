@@ -116,7 +116,7 @@ p {
     background-color: #292525 !important;
     position: absolute;
     top: 3px;
-    filter: blur(10px);
+    filter: blur(8px);
     z-index: 1;
     width: 50px;
     height: 50px;
@@ -156,19 +156,42 @@ p {
 .backspace {
     width: 207px;
 }
-.tab, 
+
+.backspace .inner__bg__dark {
+    width: 170px
+}
+
+.tab,
 .enter {
     width: 167px;
+}
+
+.tab .inner__bg__dark,
+.enter .inner__bg__dark {
+    width: 130px;
+}
+
+
+.shift .inner__bg__dark {
+    width: 150px
 }
 
 .capslock {
     width: 155px;
 }
 
-.shift { 
+.capslock .inner__bg__dark {
+    width: 118px
+}
+
+.shift {
     width: 192px;
 }
 
 .spacebar {
     width: 657px;
 }
+
+.spacebar .inner__bg__dark {
+    width: 630px
+}   
