@@ -1,18 +1,25 @@
 document.addEventListener('keydown', e => {
     const key = e.key
-    console.log(key);
+    console.log('ads' + key + 'sad');
 
-    const res = 'value-' + key
-    console.log(res);
-    
+    let target
+    if (key == ' ') {
+        target = 'value-Space'
+    } else {
+        target = 'value-' + key
+    }
 
-    const btn = document.querySelector(`.value-${key}`.replaceAll(' ', ''));;
+    console.log(target);
 
-    btn.classList.add('pressed');
+    const btns = document.querySelectorAll('.' + target);;
 
-    setTimeout(() => {
-        btn.classList.remove('pressed');
-    }, 100);
+    for (const btn of btns) {
+        console.log('Inner');
+        btn.classList.add('pressed');
+        setTimeout(() => {
+            btn.classList.remove('pressed');
+        }, 200);
+    }
 });
 
 const capslock = document.querySelector('.capslock__on');
